@@ -243,12 +243,12 @@ function remove(str) {
 function change_avengers() {
     let data = fs.readFileSync("./apps/js/db.json");
     let db = JSON.parse(data);
-    //add and remove change is for responsiveness purpose only, the page is supposed to load using details.js and whats in the json db
-    var button = document.getElementById("add");
+    //add and remove change is for responsiveness purpose only,
+    //the page is supposed to load using details.js and whats in the json db
+    var button = document.getElementById("avengers");
     if (button.value == "Add") {
         button.value = "Remove";
         button.innerHTML = "Remove from Watchlist";
-
         add("Avengers");
         for (var i = 0; i < db.length; i++) {
             if (db[i].name == "Avengers: Endgame") {
@@ -260,7 +260,6 @@ function change_avengers() {
     else {
         button.value = "Add";
         button.innerHTML = "Add to Watchlist";
-
         remove("Avengers");
         for (var i = 0; i < db.length; i++) {
             if (db[i].name == "Avengers: Endgame") {
@@ -279,6 +278,11 @@ function change_bm() {
         button.value = "Remove";
         button.innerHTML = "Remove from Watchlist";
         add("Black Mirror");
+        for (var i = 0; i < db.length; i++) {
+            if (db[i].name == "Black Mirror") {
+                db[i].added = "true";
+            }
+        }
 
     }
 
@@ -296,6 +300,11 @@ function change_bb() {
         button.value = "Remove";
         button.innerHTML = "Remove from Watchlist";
         add("Breaking Bad");
+        for (var i = 0; i < db.length; i++) {
+            if (db[i].name == "Breaking Bad") {
+                db[i].added = "true";
+            }
+        }
 
     }
 
