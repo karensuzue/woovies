@@ -1,5 +1,5 @@
 # Woo-vies
-Woo-vies is a Movie and TV show recommendation application. This repository
+Woo-vies is a Movie and TV show recommendation application built with Electron. This repository
 contains all the files related to the application and our website. The
 application can be built from scratch using the files in this repository.
 There are two steps involved in starting the application:
